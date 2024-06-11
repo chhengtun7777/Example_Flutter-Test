@@ -1,0 +1,95 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --machine --start-paused -d windows --devtools-server-address http://127.0.0.1:9100/ --target C:\Flutter\flutter_application_1\lib\main.dart
+
+## exception
+
+ProcessPackageException: ProcessException: Failed to find "C:\src\flutter\bin\cache\dart-sdk\bin\dartaotruntime.exe" in the search path.
+  Command: C:\src\flutter\bin\cache\dart-sdk\bin\dartaotruntime.exe 
+
+```
+#0      LocalProcessManager.start (package:process/src/interface/local_process_manager.dart:56:7)
+#1      ErrorHandlingProcessManager.start.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:686:24)
+#2      _run (package:flutter_tools/src/base/error_handling_io.dart:556:20)
+#3      ErrorHandlingProcessManager.start (package:flutter_tools/src/base/error_handling_io.dart:685:12)
+#4      DefaultResidentCompiler._compile (package:flutter_tools/src/compile.dart:874:37)
+#5      DefaultResidentCompiler._recompile (package:flutter_tools/src/compile.dart:734:14)
+#6      _RecompileRequest._run (package:flutter_tools/src/compile.dart:420:16)
+#7      _CompilationRequest.run (package:flutter_tools/src/compile.dart:394:30)
+#8      DefaultResidentCompiler._handleCompilationRequest (package:flutter_tools/src/compile.dart:780:23)
+#9      _rootRunUnary (dart:async/zone.dart:1407:47)
+#10     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#11     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#12     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:339:11)
+#13     _DelayedData.perform (dart:async/stream_impl.dart:515:14)
+#14     _PendingEvents.handleNext (dart:async/stream_impl.dart:620:11)
+#15     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:591:7)
+#16     _rootRun (dart:async/zone.dart:1391:47)
+#17     _CustomZone.run (dart:async/zone.dart:1301:19)
+#18     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#19     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#20     _rootRun (dart:async/zone.dart:1399:13)
+#21     _CustomZone.run (dart:async/zone.dart:1301:19)
+#22     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#23     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#24     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#25     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#26     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#27     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:185:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, 3.19.0-0.4.pre, on Microsoft Windows [Version 10.0.22631.3155], locale en-US)
+    • Flutter version 3.19.0-0.4.pre on channel beta at C:\src\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision b7e7d46a04 (13 days ago), 2024-02-02 08:21:06 -0600
+    • Engine revision 98820f0a77
+    • Dart version 3.3.0 (build 3.3.0-279.3.beta)
+    • DevTools version 2.31.0
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    • Android SDK at C:\Users\Administrator\AppData\Local\Android\sdk
+    • Platform android-34, build-tools 34.0.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+    • Java version OpenJDK Runtime Environment (build 17.0.6+0-b2043.56-10027231)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop Windows apps (Visual Studio Community 2022 17.6.4)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.6.33815.320
+    • Windows 10 SDK version 10.0.22000.0
+
+[✓] Android Studio (version 2022.3)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.6+0-b2043.56-10027231)
+
+[✓] IntelliJ IDEA Community Edition (version 2023.1)
+    • IntelliJ at C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.2
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin version 231.9065
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.22631.3155]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 121.0.6167.161
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 121.0.2277.112
+
+[✓] Network resources
+    • All expected network resources are available.
+
+• No issues found!
+```
